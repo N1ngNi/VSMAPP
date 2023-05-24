@@ -1,0 +1,291 @@
+package OOPWitchcraft.auth;
+
+import java.util.ArrayList;
+
+import OOPWitchcraft.core.ApplicationCore;
+import OOPWitchcraft.core.Constants;
+import OOPWitchcraft.core.Entity;
+import OOPWitchcraft.errors.AccountException;
+import OOPWitchcraft.items.Item;
+import OOPWitchcraft.transactions.Transaction;
+
+import OOPWitchcraft.errors.ItemException;
+import OOPWitchcraft.errors.TransactionException;
+import OOPWitchcraft.utils.AccountUtils;
+
+public class Account extends Entity {
+    private String username;
+    private String password;
+    private String address;
+    private String phone;
+    private String name;
+    private String role;
+    private int points = 0;
+
+    private final ArrayList<Item> rentedItems = new ArrayList<Item>();
+
+    public Account(String id, String username, String password) {
+        super(id);
+        this.username = username;
+        this.password = password;
+        this.role = "GUEST";
+    }
+
+    public Account(String id, String username, String password, String address, String phone, String name, String role, int points) {
+        this(id, username, password);
+        this.address = address;
+        this.phone = phone;
+        this.name = name;
+        this.role = role;
+        this.points = points;
+    }
+
+    public boolean authenticate(String password) {
+        return this.password.equals(password);
+    }
+
+    public void setId(String id) throws Exception {
+        // Check if the id is valid
+        if (!AccountUtils.isValidId(id)) throw new AccountException("Invalid item id: " + id);
+        super.setId(id);
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public ArrayList<Item> getRentedItems() {
+        return rentedItems;
+    }
+
+    public void addRental(Item rental) {
+        this.rentedItems.add(rental);
+        System.out.println("• Linked item " + rental.getId() + " to account " + this.getId());
+    }
+
+    public void removeRental(Item rental) {
+        this.rentedItems.remove(rental);
+    }
+
+    public void rentItem(Item item) throws ItemException, AccountException {
+        if (canRent(item)) {
+            var app = ApplicationCore.getInstance();
+            var transactionManager = app.getTransactionManager();
+            var itemManager = app.getItemManager();
+
+            // Create a new transaction
+            Transaction transaction = new Transaction(this, item);
+
+            // Add the transaction to the transaction manager
+            transactionManager.add(transaction);
+
+            // Check if the account is a VIP and have enough points to get free rental
+            int pointsNeeded = Constants.getPointForFreeRent();
+
+            if (this.role.equals(Constants.ROLE_VIP) && this.points >= pointsNeeded) {
+                // Deduct the current points by the points needed
+                this.points -= pointsNeeded;
+                System.out.println("• Account " + this.getId() + " has " + this.points + " points left.");
+                System.out.println("• Rental is free for account " + this.getId() + " this time.");
+            } else {
+                // Otherwise, display the price of the rental
+                System.out.println("• Account " + this.getId() + " has to pay " + item.getRentalFee() + " for this rental.");
+            }
+
+            // Decrease the stock of the item
+            itemManager.decreaseStock(item);
+
+            // Announce the rental
+            System.out.println("• Account " + this.getId() + " has rented item " + item.getId() + ".");
+
+            // Add the item to the rented items list
+            addRental(item);
+        } else {
+            throw new AccountException("Account " + this.getId() + " cannot rent item " + item.getId());
+        }
+    }
+
+    public void returnItem(Item item) throws TransactionException {
+        var app = ApplicationCore.getInstance();
+        var transactionManager = app.getTransactionManager();
+        var itemManager = app.getItemManager();
+
+        // Get the current transaction that is not returned yet
+        Transaction transaction = transactionManager.getTransaction(this, item, false);
+
+        // Resolve the transaction and increase the stock
+        transaction.resolve();
+        itemManager.increaseStock(item);
+
+        // Remove the item from the rented items list
+        removeRental(item);
+
+        // Announce the return
+        System.out.println("• Account " + this.getId() + " has returned item " + item.getId() + ".");
+
+        // Update the points
+        updatePoints();
+    }
+
+    private void updatePoints() {
+        // If the current account is not a VIP, check if it can be upgraded
+        if (!this.role.equals(Constants.ROLE_VIP)) {
+            var app = ApplicationCore.getInstance();
+            var transactionManager = app.getTransactionManager();
+
+            // Get the number of completed transactions of this account
+            var completed = transactionManager.countTransactions(this, true);
+
+            // If the current account is a REGULAR user and has completed 5 transactions, upgrade it to VIP
+            if (this.role.equals(Constants.ROLE_REGULAR) && completed >= 5) {
+                this.role = Constants.ROLE_VIP;
+                System.out.println("• Account " + this.getId() + " has been upgraded to VIP");
+            }
+
+            // If the current account is a guest and has completed 3 transaction, upgrade it to REGULAR
+            if (this.role.equals(Constants.ROLE_GUEST) && completed >= 3) {
+                this.role = Constants.ROLE_REGULAR;
+                System.out.println("• Account " + this.getId() + " has been upgraded to REGULAR");
+            }
+
+            return;
+        }
+
+        // Add points to the current account since it is a VIP
+        points += Constants.getPointPerTransaction();
+        System.out.println("• Added " + Constants.getPointPerTransaction() + " points to account " + this.getId() + ". Total: " + this.points + " points");
+    }
+
+    private boolean isAlreadyRented(Item item) {
+        // Check if this item was already rented by this account
+        for (Item i : rentedItems)
+            if (i.getId().equals(item.getId())) return true;
+
+        return false;
+    }
+
+    private boolean canRent(Item item) throws AccountException, ItemException {
+        // If the current item is already rented by this account
+        if (isAlreadyRented(item)) throw new AccountException("This item is already rented by this account");
+
+        // If the current item is not in stock, return false
+        if (!item.isInStock()) throw new ItemException("This item is not in stock");
+
+        // If the current account is either a REGULAR or a VIP, return true
+        if (this.getRole().equals("REGULAR") || this.getRole().equals("VIP")) return true;
+
+        // Otherwise, the account is a GUEST, which can only rent 2 items at a time
+        if (this.getRentedItems().size() >= 2)
+            throw new AccountException("This account cannot rent more than 2 items at a time");
+
+        // The GUEST account cannot rent an item with loan type "TWO_DAYS"
+        if (!item.getLoanType().equals("TWO_DAYS"))
+            throw new AccountException("This account cannot rent this item for 2 days");
+
+        return true;
+    }
+
+    public void updatePassword(String newPassword) throws AccountException {
+        // Check if the new password is the same as the current password
+        if (newPassword.equals(this.password))
+            throw new AccountException("Your new password is being used. Please enter the new one!");
+
+        // check if the new password is not empty
+        if (newPassword.isEmpty()) throw new AccountException("Please enter in anything.");
+
+        this.password = newPassword;
+    }
+
+    public void updatePhone(String newPhoneNum) throws AccountException {
+        // Check if the new phone number is the same as the current phone number
+        if (newPhoneNum.equals(this.phone))
+            throw new AccountException("Your new phone number is being used. Please enter the new one!");
+
+        // check if the new phone number is not empty
+        if (newPhoneNum.isEmpty()) throw new AccountException("Please enter in anything.");
+
+        if (newPhoneNum.matches("\\d{3}-\\d{3}-\\d{4}"))
+            throw new AccountException("The phone number format should be XXX-XXX-XXXX!");
+
+        this.phone = newPhoneNum;
+    }
+
+    public void updateAddress(String newAddress) throws AccountException {
+        // Check if the new address is the same as the current address
+        if (newAddress.equals(this.address))
+            throw new AccountException("Your current address is being used. Please enter the new one!");
+
+        // check if the new address is not empty
+        if (newAddress.isEmpty()) throw new AccountException("Please enter in anything.");
+
+        this.address = newAddress;
+    }
+
+    public void updateName(String newName) throws AccountException {
+        // Check if the new name is the same as the current name
+        if (newName.equals(this.name))
+            throw new AccountException("Please enter the name that is different than the one you using!");
+
+        // check if the new name is not empty
+        if (name.isEmpty()) throw new AccountException("You name cannot be empty.");
+
+        this.name = newName;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" + "username='" + username + '\'' + ", password='" + password + '\'' + ", address='" + address + '\'' + ", phone='" + phone + '\'' + ", name='" + name + '\'' + ", role='" + role + '\'' + ", points=" + points + ", rentedItems=" + rentedItems + '}';
+    }
+}

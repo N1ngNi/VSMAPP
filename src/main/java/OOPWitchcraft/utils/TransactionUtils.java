@@ -1,0 +1,54 @@
+package OOPWitchcraft.utils;
+
+import OOPWitchcraft.auth.Account;
+import OOPWitchcraft.auth.AccountManager;
+import OOPWitchcraft.items.Item;
+import OOPWitchcraft.items.ItemManager;
+import OOPWitchcraft.transactions.Transaction;
+
+public class TransactionUtils extends ObjectUtils<Transaction> {
+    private final AccountManager accountManager;
+    private final ItemManager itemManager;
+
+    public TransactionUtils(AccountManager accountManager, ItemManager itemManager) {
+        this.accountManager = accountManager;
+        this.itemManager = itemManager;
+    }
+
+    public Transaction parse(String str) {
+        try {
+            // Split the string by the delimiter
+            String[] tokens = str.split(", ");
+
+            // Get the raw data
+            String accountId = tokens[0];
+            String itemId = tokens[1];
+            boolean resolved = Boolean.parseBoolean(tokens[2]);
+
+            // Get the account and item from the managers
+            Account account = accountManager.getAccountById(accountId);
+            Item item = itemManager.get(itemId);
+
+            // Link rented item to account if it's not returned (resolved)
+            if (!resolved)
+                account.addRental(item);
+
+            return new Transaction(account, item, resolved);
+        } catch (Exception e) {
+            System.out.println("Error parsing transaction: " + str);
+            System.out.println("Error: " + e.getMessage());
+
+            return null;
+        }
+    }
+
+    public String serialize(Transaction transaction) {
+        String[] tokens = {
+                transaction.getAccount().getId(),
+                transaction.getItem().getId(),
+                String.valueOf(transaction.isResolved())
+        };
+
+        return String.join(", ", tokens);
+    }
+}
