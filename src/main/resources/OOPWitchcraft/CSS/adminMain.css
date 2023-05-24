@@ -8,7 +8,7 @@
 .button1:hover
 {
     -fx-background-color : #1E2019 ;
-}
+} 
 .button1:pressed
 {
     -fx-background-color : #587B7F ;
@@ -16,7 +16,7 @@
 
 .button2
 {
-    -fx-background-color : #E2C044;
+    -fx-background-color : #832985;
     -fx-text-fill : #1E2019;
     -fx-alignment: center-left;
     -fx-padding: 15px;

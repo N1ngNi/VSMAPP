@@ -1,25 +1,28 @@
 package OOPWitchcraft.controllers;
 
 import OOPWitchcraft.core.ApplicationCore;
+import OOPWitchcraft.scenes.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 
 public class AuthController {
     @FXML
     private TextField username;
 
     @FXML
-    private TextField password;
+    private PasswordField password;
 
     @FXML
     void exit(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Exit");
-        alert.setHeaderText("Your are about to exit the program.");
-        alert.setContentText("Are you sure that your want to exit the program?");
+        alert.setHeaderText("You are about to exit the program.");
+        alert.setContentText("Are you sure that you want to exit the program?");
 
         var app = ApplicationCore.getInstance();
         var manager = app.getSceneManager();
@@ -49,7 +52,7 @@ public class AuthController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Login Error");
             alert.setHeaderText("Your username or password is incorrect.");
-            alert.setContentText("Please try again.");
+            alert.setContentText("Please try again!");
             alert.showAndWait();
             return;
         }

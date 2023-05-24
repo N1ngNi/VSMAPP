@@ -1,15 +1,29 @@
 .buttonLogin{
-    -fx-background-color: rgba(0,0,0,0);
-    -fx-border-color: #000000;
+    -fx-background-color: #004C99;
+    -fx-border-color: #004C99;
     -fx-border-width: 2;
-    -fx-border-radius: 15px;
-}
-.buttonLogin:hover{
-    -fx-border-width: 2;
-    -fx-background-radius: 15px;
-    -fx-background-color: #e7cb66;
+    -fx-border-radius: 0px;
 }
 
+.buttonLogin:hover{
+    -fx-background-color: #101214;
+    -fx-border-color: #101214;
+    -fx-border-width: 2;
+    -fx-background-radius: 0px;
+}
+.buttonSignup{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #004C99;
+    -fx-border-width: 2;
+    -fx-border-radius: 0px;
+
+}
+.buttonSignup:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #101214;
+    -fx-border-width: 2;
+    -fx-border-radius: 0px;
+}
 .buttonProile{
     -fx-background-color: rgba(0,0,0,0);
     -fx-border-color: #000000;
@@ -59,11 +73,11 @@
 
 
 .myBackGround{
-    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-color: #00000000;
 }
 
 .buttonYellow{
-    -fx-background-color: #E2C044;
+    -fx-background-color: #cebecb;
     -fx-background-radius: 10;
 }
 
