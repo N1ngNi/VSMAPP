@@ -26,5 +26,7 @@
 file được cấu tạo bởi cả CSS và JavaFX với JavaFX sẽ xử lý phần scene và stuffs<br/>
 CSS dùng để xử lý màu : Đ hoặc có thể nhiều hơn :<br/>
 CSS ở trong file resources
-JAVAFX sẽ nằm ở trong Controller và Scenes
+JAVAFX sẽ nằm ở trong Controller và Scenes<br/>
+FRONT END:
+BACK END:
 <h3 align="center">!!GLHF!!</h3>
