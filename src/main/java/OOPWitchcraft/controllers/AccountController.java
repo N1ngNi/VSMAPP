@@ -285,7 +285,7 @@ public class AccountController implements Initializable {
     static boolean showConfirmationReturn() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION); // Create an alert
         alert.setTitle("Confirmation");
-        alert.setHeaderText("Your are about to return this item.");
+        alert.setHeaderText("You are about to return this item.");
         alert.setContentText("Are you sure that you want to return it?");
         return alert.showAndWait().orElseThrow() == ButtonType.OK; // Show the alert
     }
