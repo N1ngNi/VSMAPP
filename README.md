@@ -6,13 +6,13 @@
 
 ### I. CONTRIBUTION INFORMATION
 
-#### CONTRIBUTOR 1:
+#### CONTRIBUTOR 1: Tran Thanh Tu
 
-#### CONTRIBUTOR 2:
+#### CONTRIBUTOR 2: Huynh Quang Dong
 
-#### CONTRIBUTOR 3:
+#### CONTRIBUTOR 3: Huynh Ngoc Duy
 
-#### CONTRIBUTOR 4:
+#### CONTRIBUTOR 4: Hoang Le Quoc Hung
 
 ---
 
@@ -21,7 +21,6 @@
 ---
 
 ### III. REFERENCES
-
 
 <h2>RANDOM NOTES SO THAT TMR I WILL KNOW WHAT TO DO</h2>
 file được cấu tạo bởi cả CSS và JavaFX với JavaFX sẽ xử lý phần scene và stuffs<br/>
