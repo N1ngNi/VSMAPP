@@ -18,23 +18,23 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOPWitchcraft.controllers.AdminDashboardController">
-    <VBox layoutX="-1.0" prefHeight="0.0" prefWidth="250.0" style="-fx-background-color: #393E41;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOPWitchcraft.controllers.AdminDashboardController">
+    <VBox layoutX="-1.0" prefHeight="0.0" prefWidth="250.0" style="-fx-background-color: #004C99;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
         <Pane prefHeight="100.0" prefWidth="200.0" styleClass="pane1" stylesheets="@CSS/adminMain.css">
-            <ImageView fitHeight="75.0" fitWidth="259.0" layoutX="-3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@Images/3_transparent_smallCopy.png" />
+            <ImageView fitHeight="123.0" fitWidth="500.0" layoutX="-116.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/WITCHCRAFTtrans.png" />
             </ImageView>
         </Pane>
         <Pane prefHeight="50.0" prefWidth="252.0" styleClass="pane1" stylesheets="@CSS/adminMain.css">
             <children>
-                <ImageView fitHeight="36.0" fitWidth="421.0" layoutX="-27.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="36.0" fitWidth="421.0" layoutX="-28.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@Images/Admin_Panel_yellow.png" />
                     </image>
                 </ImageView>
             </children>
         </Pane>
-        <Button fx:id="btnAccount" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="256.0" styleClass="button1" stylesheets="@CSS/adminMain.css" text="     Accounts" textAlignment="CENTER">
+        <Button fx:id="btnAccount" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="256.0" styleClass="buttonAccount" stylesheets="@CSS/adminMain.css" text="     Accounts" textAlignment="CENTER">
             <graphic>
                 <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -48,11 +48,8 @@
             <VBox.margin>
                 <Insets left="5.0" right="5.0" />
             </VBox.margin>
-            <padding>
-                <Insets left="10.0" />
-            </padding>
         </Button>
-        <Button fx:id="btnItems" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="256.0" styleClass="button1" stylesheets="@CSS/adminMain.css" text="     Items" textAlignment="CENTER">
+        <Button fx:id="btnItems" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="256.0" styleClass="buttonAccount" stylesheets="@CSS/adminMain.css" text="     Items" textAlignment="CENTER">
             <graphic>
                 <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -60,9 +57,6 @@
                     </image>
                 </ImageView>
             </graphic>
-            <padding>
-                <Insets left="50.0" />
-            </padding>
             <VBox.margin>
                 <Insets left="5.0" right="5.0" />
             </VBox.margin>
@@ -73,7 +67,7 @@
                 <Font size="18.0" />
             </font>
         </Button>
-        <Button fx:id="btnTransactions" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="256.0" styleClass="button1" stylesheets="@CSS/adminMain.css" text="     Transactions" textAlignment="CENTER">
+        <Button fx:id="btnTransactions" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="256.0" styleClass="buttonAccount" stylesheets="@CSS/adminMain.css" text="     Transactions" textAlignment="CENTER">
             <graphic>
                 <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -81,9 +75,6 @@
                     </image>
                 </ImageView>
             </graphic>
-            <padding>
-                <Insets left="50.0" />
-            </padding>
             <opaqueInsets>
                 <Insets left="50.0" right="50.0" />
             </opaqueInsets>
@@ -94,25 +85,22 @@
                 <Insets left="5.0" right="5.0" />
             </VBox.margin>
         </Button>
-        <Pane styleClass="pane1" stylesheets="@CSS/adminMain.css" VBox.vgrow="ALWAYS" />
-        <Button fx:id="btnLogOut" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="256.0" styleClass="button1" stylesheets="@CSS/adminMain.css" text="     Log Out">
-            <padding>
-                <Insets left="50.0" />
-            </padding>
-            <graphic>
-                <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+        <Pane style="-fx-background-color: #004C99;" VBox.vgrow="ALWAYS">
+         <children>
+              <Button fx:id="btnLogOut" graphicTextGap="15.0" layoutX="14.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="35.0" prefWidth="229.0" styleClass="buttonAccount" stylesheets="@CSS/adminMain.css" text="     Log Out">
+                  <padding>
+                      <Insets left="50.0" />
+                  </padding>
+                  <font>
+                      <Font size="18.0" />
+                  </font>
+              </Button>
+                <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="26.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@Icons/exit.png" />
                     </image>
                 </ImageView>
-            </graphic>
-            <VBox.margin>
-                <Insets bottom="5.0" left="5.0" right="5.0" />
-            </VBox.margin>
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Button>
+         </children></Pane>
     </VBox>
     <StackPane AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="115.0">
         <children>
@@ -155,12 +143,12 @@
                         <Insets right="5.0" top="5.0" />
                      </HBox.margin>
                   </ComboBox>
-                        <Button fx:id="btnAccountMngSearch" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#searchAccount" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: E2C044; -fx-background-radius: 10;" text="Search">
+                        <Button fx:id="btnAccountMngSearch" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#searchAccount" prefHeight="30.0" prefWidth="204.0" styleClass="buttonStackpane" stylesheets="@CSS/adminMain.css" text="Search">
                             <HBox.margin>
                                 <Insets right="5.0" top="5.0" />
                             </HBox.margin>
                         </Button>
-                  <Button fx:id="btnTransactionSearch11" alignment="CENTER" mnemonicParsing="false" onAction="#createAccount" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: E2C044; -fx-background-radius: 10;" stylesheets="@CSS/adminMain.css" text="Create">
+                  <Button fx:id="btnTransactionSearch11" alignment="CENTER" mnemonicParsing="false" onAction="#createAccount" prefHeight="30.0" prefWidth="204.0" styleClass="buttonStackpane" stylesheets="@CSS/adminMain.css" text="Create">
                      <HBox.margin>
                         <Insets right="5.0" top="5.0" />
                      </HBox.margin>
@@ -203,12 +191,12 @@
                            <Insets right="5.0" top="5.0" />
                         </HBox.margin>
                      </ComboBox>
-                     <Button fx:id="btnTransactionSearch" alignment="CENTER" mnemonicParsing="false" onAction="#searchItem" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: E2C044; -fx-background-radius: 10;" stylesheets="@CSS/adminMain.css" text="Search">
+                     <Button fx:id="btnTransactionSearch" alignment="CENTER" mnemonicParsing="false" onAction="#searchItem" prefHeight="30.0" prefWidth="200.0" styleClass="buttonStackpane" stylesheets="@CSS/adminMain.css" text="Search" textFill="WHITE">
                         <HBox.margin>
                            <Insets right="5.0" top="5.0" />
                         </HBox.margin>
                      </Button>
-                            <Button fx:id="btnItemSearch" alignment="CENTER" mnemonicParsing="false" onAction="#createItem" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: E2C044; -fx-background-radius: 10;" stylesheets="@CSS/adminMain.css" text="Create">
+                            <Button fx:id="btnItemSearch" alignment="CENTER" mnemonicParsing="false" onAction="#createItem" prefHeight="30.0" prefWidth="204.0" styleClass="buttonStackpane" stylesheets="@CSS/adminMain.css" text="Create" textFill="WHITE">
                                 <HBox.margin>
                                     <Insets bottom="5.0" top="5.0" />
                                 </HBox.margin>
@@ -217,7 +205,7 @@
                     </HBox>
                 </children>
             </GridPane>
-            <GridPane fx:id="pnlTransactions" style="-fx-background-radius: 10;">
+            <GridPane fx:id="pnlTransactions">
                 <columnConstraints>
                     <ColumnConstraints />
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

@@ -1,15 +1,16 @@
-.button1
+.buttonAccount
 {
-    -fx-background-color : #393E41;
+    -fx-background-color : #004C99;
     -fx-text-fill : #D3D0CB;
     -fx-alignment: center-left;
-    -fx-padding: 15px;
+    /* -fx-padding: 0px; */
 }
-.button1:hover
+.buttonAccount:hover
 {
-    -fx-background-color : #1E2019 ;
+    -fx-background-color: #101214;
+    -fx-background-radius: 15px;
 } 
-.button1:pressed
+.buttonAccount:pressed
 {
     -fx-background-color : #587B7F ;
 }
@@ -27,12 +28,18 @@
 }
 .button2:pressed
 {
-    -fx-background-color : #587B7F ;
+    -fx-background-color : #587B7F;
 }
 
-.pane1 {
-    -fx-background-color: #393E41;
+.buttonStackpane{
+    -fx-background-color : #004C99;
+    -fx-background-radius: 15px;
 }
+.buttonStackpane:hover
+{
+    -fx-background-color: #101214;
+    -fx-background-radius: 15px;
+} 
 
 .pane2 {
     -fx-background-color: #393E41;
