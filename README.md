@@ -33,6 +33,11 @@ JAVAFX sẽ nằm ở trong Controller và Scenes<br/>
 Xong phần đăng nhập<br/>
 lên ý tưởng cho các scene còn lại <br/>
 
+25/5/2023 10:25PM<br/>
+Xong phần thay đổi thông tin user nhưng mà vẵn còn lỗi\*<br/>
+đang làm phần Item<br/>
+Lỗi HIển thị tên của user\*<br/>
+
 <h5>SOFAR THINGS GOING SMOOTH!!!</h5>
 FRONT END: 
 <br/>
