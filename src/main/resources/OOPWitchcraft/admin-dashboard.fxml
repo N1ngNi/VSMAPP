@@ -20,12 +20,12 @@
 
 <AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOPWitchcraft.controllers.AdminDashboardController">
     <VBox layoutX="-1.0" prefHeight="0.0" prefWidth="250.0" style="-fx-background-color: #004C99;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <Pane prefHeight="100.0" prefWidth="200.0" styleClass="pane1" stylesheets="@CSS/adminMain.css">
+        <Pane prefHeight="100.0" prefWidth="200.0" styleClass="pane1" stylesheets="@CSS/AdminUser.css">
             <ImageView fitHeight="123.0" fitWidth="500.0" layoutX="-116.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../images/WITCHCRAFTtrans.png" />
             </ImageView>
         </Pane>
-        <Pane prefHeight="50.0" prefWidth="252.0" styleClass="pane1" stylesheets="@CSS/adminMain.css">
+        <Pane prefHeight="50.0" prefWidth="252.0" styleClass="pane1" stylesheets="@CSS/AdminUser.css">
             <children>
                 <ImageView fitHeight="36.0" fitWidth="421.0" layoutX="-28.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -113,7 +113,7 @@
                     <RowConstraints maxHeight="239.66665649414062" minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="NEVER" />
                     <RowConstraints minHeight="10.0" prefHeight="353.0" vgrow="SOMETIMES" />
                 </rowConstraints>
-                <TableView fx:id="accountsTable" style="-fx-background-radius: 10;" stylesheets="@CSS/adminMain.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                <TableView fx:id="accountsTable" style="-fx-background-radius: 10;" stylesheets="@CSS/AdminUser.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
@@ -166,7 +166,7 @@
                     <RowConstraints minHeight="10.0" prefHeight="353.0" vgrow="SOMETIMES" />
                 </rowConstraints>
                 <children>
-                    <TableView fx:id="itemsTable" style="-fx-background-radius: 10;" stylesheets="@CSS/adminMain.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <TableView fx:id="itemsTable" style="-fx-background-radius: 10;" stylesheets="@CSS/AdminUser.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                         <columnResizePolicy>
                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                         </columnResizePolicy>
@@ -215,7 +215,7 @@
                     <RowConstraints minHeight="10.0" prefHeight="353.0" vgrow="SOMETIMES" />
                 </rowConstraints>
                 <children>
-                    <TableView fx:id="transactionsTable" style="-fx-background-radius: 10;" stylesheets="@CSS/adminMain.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <TableView fx:id="transactionsTable" style="-fx-background-radius: 10;" stylesheets="@CSS/AdminUser.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                         <columnResizePolicy>
                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                         </columnResizePolicy>
