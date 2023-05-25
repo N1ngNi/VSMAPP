@@ -307,7 +307,7 @@
             <Label fx:id="statusMini" layoutX="14.0" layoutY="14.0" text="/Profile" />
          </children>
       </Pane>
-      <Label fx:id="optionLabel" layoutX="209.0" layoutY="83.0" styleClass="myLabelInAccountScene" stylesheets="@CSS/JVMStyleSheet.css" text="Profil" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="40.0">
+      <Label fx:id="optionLabel" layoutX="209.0" layoutY="83.0" styleClass="myLabelInAccountScene" stylesheets="@CSS/JVMStyleSheet.css" text="Profile" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="40.0">
          <font>
             <Font size="24.0" />
          </font>
