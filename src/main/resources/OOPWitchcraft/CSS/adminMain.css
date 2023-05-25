@@ -1,3 +1,4 @@
+
 .buttonAccount
 {
     -fx-background-color : #004C99;
@@ -31,6 +32,10 @@
     -fx-background-color : #587B7F;
 }
 
+.image1{
+    display: block;
+    margin: 0 auto;
+}
 .buttonStackpane{
     -fx-background-color : #004C99;
     -fx-background-radius: 15px;

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -19,7 +17,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOPWitchcraft.controllers.AccountManagementController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOPWitchcraft.controllers.AccountManagementController">
    <children>
       <AnchorPane fx:id="displayPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
          <children>
@@ -85,14 +83,15 @@
             </VBox>
          </children>
       </AnchorPane>
-      <VBox layoutX="33.0" layoutY="20.0" prefWidth="250.0" style="-fx-background-color: #393E41;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutX="33.0" layoutY="20.0" prefWidth="250.0" style="-fx-background-color: #004C99;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="47.0" prefWidth="189.0">
+            <HBox prefHeight="56.0" prefWidth="250.0">
                <children>
                   <Circle fx:id="circle" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeMiterLimit="9.0" strokeType="INSIDE">
                      <HBox.margin>
-                        <Insets right="7.0" />
-                     </HBox.margin></Circle>
+                        <Insets left="4.0" right="7.0" top="7.0" />
+                     </HBox.margin>
+                  </Circle>
                   <GridPane HBox.hgrow="ALWAYS">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -111,78 +110,76 @@
                      </children>
                   </GridPane>
                </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </HBox>
             <ImageView fitHeight="76.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Icons/profile.png" />
                </image>
             </ImageView>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#backToDashboard" prefHeight="57.0" prefWidth="263.0" styleClass="button1" stylesheets="@CSS/adminMain.css" text="Dashboard " textFill="WHITE">
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#backToDashboard" prefHeight="57.0" prefWidth="263.0" styleClass="buttonAccount" stylesheets="@CSS/adminMain.css" text="Dashboard " textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
                <graphic>
                </graphic>
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets left="5.0" right="5.0" top="20.0" />
                </VBox.margin>
                <graphic>
-                  <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icons/list.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#profile" prefHeight="62.0" prefWidth="260.0" styleClass="button1" stylesheets="@CSS/adminMain.css" text="Profile" textFill="WHITE">
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#profile" prefHeight="62.0" prefWidth="260.0" styleClass="buttonAccount" stylesheets="@CSS/adminMain.css" text="Profile" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icons/users.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
             </Button>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#editProfile" prefHeight="61.0" prefWidth="263.0" text="Edit Profile" textFill="WHITE">
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#editProfile" prefHeight="61.0" prefWidth="263.0" styleClass="buttonAccount" stylesheets="@CSS/adminMain.css" text="Edit Profile" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
                <graphic>
                </graphic>
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets left="5.0" right="5.0" />
                </VBox.margin>
                <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icons/settings-sliders.png" />
                      </image>
                   </ImageView>
                </graphic>
-               <stylesheets>
-                  <URL value="@CSS/adminMain.css" />
-                  <URL value="@CSS/JVMStyleSheet.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="button1" />
-                  <String fx:value="buttonAccount" />
-               </styleClass>
             </Button>
-            <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#logout" prefHeight="56.0" prefWidth="251.0" styleClass="button1" stylesheets="@CSS/adminMain.css" text="Log out">
+            <Pane prefHeight="200.0" prefWidth="276.0" VBox.vgrow="ALWAYS" />
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#logout" prefHeight="56.0" prefWidth="251.0" styleClass="buttonAccount" stylesheets="@CSS/adminMain.css" text="Log out">
                <font>
                   <Font size="18.0" />
                </font>
                <graphic>
                </graphic>
                <VBox.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="15.0" left="5.0" right="5.0" />
                </VBox.margin>
                <graphic>
-                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icons/exit.png" />
                      </image>
@@ -293,7 +290,7 @@
             </TextField>
             <BorderPane>
                <center>
-                  <Button mnemonicParsing="false" onAction="#save" prefHeight="40.0" prefWidth="100.0" styleClass="buttonProile" stylesheets="@CSS/JVMStyleSheet.css" text="Save">
+                  <Button mnemonicParsing="false" onAction="#save" prefHeight="40.0" prefWidth="100.0" styleClass="buttonSignup" stylesheets="@CSS/JVMStyleSheet.css" text="Save">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -310,7 +307,7 @@
             <Label fx:id="statusMini" layoutX="14.0" layoutY="14.0" text="/Profile" />
          </children>
       </Pane>
-      <Label fx:id="optionLabel" layoutX="209.0" layoutY="83.0" styleClass="myLabelInAccountScene" stylesheets="@CSS/JVMStyleSheet.css" text="Profile" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="40.0">
+      <Label fx:id="optionLabel" layoutX="209.0" layoutY="83.0" styleClass="myLabelInAccountScene" stylesheets="@CSS/JVMStyleSheet.css" text="Profil" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="40.0">
          <font>
             <Font size="24.0" />
          </font>

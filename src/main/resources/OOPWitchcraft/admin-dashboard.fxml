@@ -143,12 +143,12 @@
                         <Insets right="5.0" top="5.0" />
                      </HBox.margin>
                   </ComboBox>
-                        <Button fx:id="btnAccountMngSearch" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#searchAccount" prefHeight="30.0" prefWidth="204.0" styleClass="buttonStackpane" stylesheets="@CSS/adminMain.css" text="Search">
+                        <Button fx:id="btnAccountMngSearch" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#searchAccount" prefHeight="30.0" prefWidth="204.0" styleClass="buttonStackpane" stylesheets="@CSS/adminMain.css" text="Search" textFill="WHITE">
                             <HBox.margin>
                                 <Insets right="5.0" top="5.0" />
                             </HBox.margin>
                         </Button>
-                  <Button fx:id="btnTransactionSearch11" alignment="CENTER" mnemonicParsing="false" onAction="#createAccount" prefHeight="30.0" prefWidth="204.0" styleClass="buttonStackpane" stylesheets="@CSS/adminMain.css" text="Create">
+                  <Button fx:id="btnTransactionSearch11" alignment="CENTER" mnemonicParsing="false" onAction="#createAccount" prefHeight="30.0" prefWidth="204.0" styleClass="buttonStackpane" stylesheets="@CSS/adminMain.css" text="Create" textFill="WHITE">
                      <HBox.margin>
                         <Insets right="5.0" top="5.0" />
                      </HBox.margin>
