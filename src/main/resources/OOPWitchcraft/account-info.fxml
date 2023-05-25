@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOPWitchcraft.controllers.AccountManagementController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOPWitchcraft.controllers.AccountManagementController">
    <children>
       <AnchorPane fx:id="displayPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
          <children>
@@ -307,7 +297,7 @@
             <Label fx:id="statusMini" layoutX="14.0" layoutY="14.0" text="/Profile" />
          </children>
       </Pane>
-      <Label fx:id="optionLabel" layoutX="209.0" layoutY="83.0" styleClass="myLabelInAccountScene" stylesheets="@CSS/JVMStyleSheet.css" text="Profil" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="40.0">
+      <Label fx:id="optionLabel" layoutX="209.0" layoutY="83.0" styleClass="myLabelInAccountScene" stylesheets="@CSS/JVMStyleSheet.css" text="Profile" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="40.0">
          <font>
             <Font size="24.0" />
          </font>
