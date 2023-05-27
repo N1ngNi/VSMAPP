@@ -268,7 +268,7 @@ public class Account extends Entity {
             throw new AccountException("Your current address is being used. Please enter the new one!");
 
         // check if the new address is not empty
-        if (newAddress.isEmpty()) throw new AccountException("Please enter in anything.");
+        if (newAddress.isEmpty()) throw new AccountException("Please put in something!");
 
         this.address = newAddress;
     }
@@ -279,7 +279,7 @@ public class Account extends Entity {
             throw new AccountException("Please enter the name that is different than the one you using!");
 
         // check if the new name is not empty
-        if (name.isEmpty()) throw new AccountException("You name cannot be empty.");
+        if (name.isEmpty()) throw new AccountException("Your name cannot be empty.");
 
         this.name = newName;
     }

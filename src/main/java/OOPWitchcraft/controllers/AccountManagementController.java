@@ -83,14 +83,14 @@ public class AccountManagementController implements Initializable {
     void editProfile(ActionEvent event) {
         this.editInfoPane.setVisible(true);
         this.displayPane.setVisible(false);
-        this.optionLabel.setText("/Edit Profile");
+        this.optionLabel.setText("Edit Profile");
     }
 
     @FXML
     void profile(ActionEvent event) {
         this.editInfoPane.setVisible(false);
         this.displayPane.setVisible(true);
-        this.optionLabel.setText("/Profile");
+        this.optionLabel.setText("Profile");
     }
 
     @FXML
@@ -112,7 +112,7 @@ public class AccountManagementController implements Initializable {
 
     static boolean showLogoutConfirmation() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Log out");
+        alert.setTitle("Log out!");
         alert.setHeaderText("Your are about to log out the program.");
         alert.setContentText("Are you sure that your want to log out the program?");
         return alert.showAndWait().orElseThrow() == ButtonType.OK;
@@ -183,7 +183,6 @@ public class AccountManagementController implements Initializable {
         this.phoneLabel.setText("Phone Number "+ account.getPhone());
         this.addressLabel.setText("Address: "+account.getAddress());
         this.rankingLabel.setText("Role: " + account.getRole());
-        //this.pointLabel.setText("Points: " + String.valueOf(account.getPoints()));
         this.userNameLabel.setText("User Name: "+ account.getUsername());
         this.passwordLabel.setText("Password: " + account.getPassword());
     }

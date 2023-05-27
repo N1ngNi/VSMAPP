@@ -30,7 +30,7 @@ public class AuthManager {
 
     public boolean login(String username, String password) {
         try {
-            System.out.println("\nLogging in as " + username + "...");
+            System.out.println("\nLog in as " + username + "!");
 
             // Check if username is admin
             if (username.equals(adminUsername)) {
@@ -64,7 +64,7 @@ public class AuthManager {
 
     public boolean signup(String username, String password) {
         try {
-            System.out.println("Signing up as " + username + "...");
+            System.out.println("Sign up as " + username + "!");
 
             // Check if username is admin
             if (username.equals(adminUsername)) {
@@ -95,7 +95,7 @@ public class AuthManager {
     }
 
     public void logout() {
-        System.out.println("Logging out");
+        System.out.println("Logged out!");
         currentAccount = null;
         isAdmin = false;
     }

@@ -74,19 +74,19 @@ public class AccountManager extends Manager<Account> {
     public Account createAccount(String username, String password) throws AccountException {
         // Check if username is empty
         if (username.isEmpty())
-            throw new AccountException("Username cannot be empty");
+            throw new AccountException("Username cannot be empty!");
 
         // Check if password is empty
         if (password.isEmpty())
-            throw new AccountException("Password cannot be empty");
+            throw new AccountException("Password cannot be empty!");
 
         // Check if the username is admin
         if (username.equals("admin"))
-            throw new AccountException("The username 'admin' is reserved.");
+            throw new AccountException("The username 'admin' is reserved!");
 
         // Check if account already exists
         if (getAccountByUsername(username) != null)
-            throw new AccountException("Account already exists.");
+            throw new AccountException("Account already exists!");
         else {
             // Generate ID
             String id = generateId();

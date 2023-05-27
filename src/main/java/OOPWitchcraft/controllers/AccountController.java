@@ -420,8 +420,8 @@ public class AccountController implements Initializable {
     static boolean showLogoutConfirmation() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Log out");
-        alert.setHeaderText("Your are about to log out the program.");
-        alert.setContentText("Are you sure that your want to log out the program?");
+        alert.setHeaderText("You are about to log out the program.");
+        alert.setContentText("Are you sure that you want to log out the program?");
         return alert.showAndWait().orElseThrow() == ButtonType.OK;
     }
 

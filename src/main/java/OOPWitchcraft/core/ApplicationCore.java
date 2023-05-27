@@ -32,9 +32,9 @@ public class ApplicationCore {
     private final AuthManager auth = new AuthManager();
     private final SceneManager scenes = new SceneManager();
 
-    /**
-     * Initialize the application managers with local data.
-     */
+
+//     Initialize the application managers with local data.
+
     public void initialize() throws IOException {
         // Initialize all managers
         internal.initialize();
@@ -48,9 +48,9 @@ public class ApplicationCore {
         scenes.link(app, stage);
     }
 
-    /**
-     * Stop the application managers and save the data to the local storage.
-     */
+
+     //Stop the application managers and save the data to the local storage.
+
 
     public void save() {internal.stop();}
     public void stop() {
