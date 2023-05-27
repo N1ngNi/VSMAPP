@@ -22,7 +22,7 @@
 <AnchorPane fx:id="accountPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOPWitchcraft.controllers.AccountController">
     <VBox layoutX="6.0" prefWidth="250.0" style="-fx-background-color: #004C99;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
         <ImageView fitHeight="123.0" fitWidth="333.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../images/Translogo.png" />
+            <Image url="@Images/Translogo.png" />
             <VBox.margin>
                 <Insets left="50.0" top="10.0" />
             </VBox.margin>

@@ -166,7 +166,7 @@ public class AccountController implements Initializable {
         });
         // Set the table columns
         Image image = new Image(
-                Objects.requireNonNull(getClass().getResourceAsStream("/images/images.png")));
+                Objects.requireNonNull(getClass().getResourceAsStream("/OOPWitchcraft/Images/images.png")));
         circleImage.setFill(new ImagePattern(image));
 
         var app = ApplicationCore.getInstance();

@@ -233,7 +233,7 @@ public class SceneManager {
         // Update the dialog's properties
         alert.setTitle("Exit");
         alert.setHeaderText("You are about to exit the program.");
-        alert.setContentText("Are you sure that your want to exit the program?");
+        alert.setContentText("Are you sure that you want to exit the program?");
 
         // Show the dialog and wait for the user's response
         if (alert.showAndWait().orElseThrow() == ButtonType.OK) {
