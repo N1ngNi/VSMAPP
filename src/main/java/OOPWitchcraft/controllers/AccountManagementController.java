@@ -166,7 +166,7 @@ public class AccountManagementController implements Initializable {
             this.pointLabel.setVisible(false);
         sceneController = ApplicationCore.getInstance().getSceneManager();
         Image image = new Image(
-                Objects.requireNonNull(getClass().getResourceAsStream("/images/images.png")));
+                Objects.requireNonNull(getClass().getResourceAsStream("/OOPWitchcraft/Images/images.png")));
         circle.setFill(new ImagePattern(image));
         this.editInfoPane.setVisible(false);
         this.displayPane.setVisible(true);
