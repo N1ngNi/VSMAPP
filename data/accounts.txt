@@ -1,8 +1,8 @@
 C001, hnd, 1, Huynh Ngoc Duy, 123 Main St., 0901234567, VIP, 0
-C002, ttt, 1, Ning Tran, 702 Nguyen Van Linh, 0912959430, VIP, 0
-C003, hlqh, 3, Hoang Le Quoc Hung, Nha Be, 123-456-7890, VIP, 0
+C002, ttt, 1, Ning Tran, 702 Nguyen Van Linh, 0912959430, GUEST, 0
+C003, hlqh, 3, Hoang Le Quoc Hung, Nha Be, 123-456-7890, REGULAR, 0
 C004, hqd, 004, Huynh Quang Dong, 123 Main St., 123-456-7890, VIP, 0
 C005, qdong, 005, Quang Dong, 123 Main St., 123-456-7890, GUEST, 0
 C006, guest, 1, Guest Account, 123 Main St., 123-456-7890, GUEST, 0
 C007, regular, 1, Regular Account, 123 Main St., 123-456-7890, REGULAR, 0
-C008, thanhtu, 008, VIP Account, 123 Main St., 123-456-7890, VIP, 0
+C008, thanhtu, 008, Tran Thanh Tu, 123 Main St., 123-456-7890, VIP, 0
