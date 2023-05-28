@@ -20,7 +20,7 @@ Duy played a vital role in integrating the project with a database system. He de
 Hung focused on testing the project and fixing any issues that arose. He conducted various tests, including unit tests, integration tests, and system tests, to ensure the functionality and stability of the software. Hung also collaborated with other team members to identify and resolve bugs, improving the overall quality and reliability of the project.
 
 ### II. PROJECT LINKS
-[VIDEO STORE MANAGEMENT](https://github.com/N1ngNi/VSMAPP)
-[UML DIAGRAM](https://drive.google.com/file/d/1egLu94b8bk3eYGFKm995SbiilkICDckK/view?usp=sharing)
+####[VIDEO STORE MANAGEMENT](https://github.com/N1ngNi/VSMAPP)
+####[UML DIAGRAM](https://drive.google.com/file/d/1egLu94b8bk3eYGFKm995SbiilkICDckK/view?usp=sharing)
 
 <h3 align="center">---</h3>
