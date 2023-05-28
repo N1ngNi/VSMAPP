@@ -1,8 +1,5 @@
 <h1 align="center">FINAL PROJECT - VIDEO STORE MANAGER</h1>
 
-## TABLE OF CONTENT
-
----
 
 ### I. CONTRIBUTION INFORMATION
 
@@ -24,8 +21,5 @@ Hung focused on testing the project and fixing any issues that arose. He conduct
 
 ### II. PROJECT LINKS
 
----
-
-### III. REFERENCES
 
 <h3 align="center">---</h3>
