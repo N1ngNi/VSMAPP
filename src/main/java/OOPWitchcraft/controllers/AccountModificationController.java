@@ -1,6 +1,7 @@
 package OOPWitchcraft.controllers;
 
 import OOPWitchcraft.auth.Account;
+import OOPWitchcraft.scenes.SceneManager;
 import OOPWitchcraft.core.ApplicationCore;
 import OOPWitchcraft.core.Constants;
 import OOPWitchcraft.errors.AccountException;
@@ -24,6 +25,7 @@ public class AccountModificationController implements Initializable {
     }
     @FXML
     HBox pointPane = new HBox();
+    private final SceneManager sceneManager = ApplicationCore.getInstance().getSceneManager();
 
     @FXML
     private TextField addressField;
@@ -51,9 +53,10 @@ public class AccountModificationController implements Initializable {
     @FXML
     // Button event handler
     void cancel(ActionEvent event) {
-        var app = ApplicationCore.getInstance();
-        var manager = app.getSceneManager();
-        manager.showScene("admin-dashboard");
+//        var app = ApplicationCore.getInstance();
+//        var manager = app.getSceneManager();
+//        manager.showScene("admin-dashboard");
+        this.sceneManager.showScene("admin-dashboard");
     }
 
     @FXML
@@ -91,7 +94,7 @@ public class AccountModificationController implements Initializable {
             }
 
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("admin-dasboard.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("admin-dashboard.fxml"));
             AdminDashboardController controller =fxmlLoader.getController();
             controller.updateTable();
             displayStatus();
