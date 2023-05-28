@@ -6,7 +6,7 @@
 
 ### I. CONTRIBUTION INFORMATION
 
-#### CONTRIBUTOR 1: Tran Thanh Tu
+#### CONTRIBUTOR 1: [Tran Thanh Tu](https://github.com/N1ngNi) (ID:S3957386)
 
 #### CONTRIBUTOR 2: Huynh Quang Dong
 
