@@ -53,7 +53,7 @@ public class AccountModificationController implements Initializable {
     void cancel(ActionEvent event) {
         var app = ApplicationCore.getInstance();
         var manager = app.getSceneManager();
-        manager.showScene("Admin-Dashboard");
+        manager.showScene("admin-dashboard");
     }
 
     @FXML
