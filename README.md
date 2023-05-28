@@ -6,7 +6,7 @@
 
 ### I. CONTRIBUTION INFORMATION
 
-#### CONTRIBUTOR 1: Tran Thanh Tu (ID:S3957386)
+#### <p style="color:red;">CONTRIBUTOR 1: Tran Thanh Tu (ID:S3957386)</p>
 
 Tu was responsible for creating an intuitive and visually appealing UI for the project. Tu's contributions include designing interactive forms, implementing responsive layouts, and ensuring seamless user experiences. His attention to detail and creative design solutions greatly enhanced the overall usability and aesthetics of the application.
 
