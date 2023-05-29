@@ -188,14 +188,14 @@ public class Account extends Entity {
             // Get the number of completed transactions of this account
             var completed = transactionManager.countTransactions(this, true);
 
-            // If the current account is a REGULAR user and has completed 5 transactions, upgrade it to VIP
-            if (this.role.equals(Constants.ROLE_REGULAR) && completed >= 5) {
+            // If the current account is a REGULAR user and has completed more than 5 transactions, upgrade it to VIP
+            if (this.role.equals(Constants.ROLE_REGULAR) && completed > 5) {
                 this.role = Constants.ROLE_VIP;
                 System.out.println("• Account " + this.getId() + " has been upgraded to VIP");
             }
 
-            // If the current account is a guest and has completed 3 transaction, upgrade it to REGULAR
-            if (this.role.equals(Constants.ROLE_GUEST) && completed >= 3) {
+            // If the current account is a guest and has completed more than 3 transaction, upgrade it to REGULAR
+            if (this.role.equals(Constants.ROLE_GUEST) && completed > 3) {
                 this.role = Constants.ROLE_REGULAR;
                 System.out.println("• Account " + this.getId() + " has been upgraded to REGULAR");
             }
@@ -231,7 +231,7 @@ public class Account extends Entity {
             throw new AccountException("This account cannot rent more than 2 items at a time");
 
         // The GUEST account cannot rent an item with loan type "TWO_DAYS"
-        if (!item.getLoanType().equals("TWO_DAYS"))
+        if (!item.getLoanType().equals("ONE_WEEK"))
             throw new AccountException("This account cannot rent this item for 2 days");
 
         return true;

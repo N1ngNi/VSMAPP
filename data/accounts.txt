@@ -7,3 +7,4 @@ C006, guest, 1, Guest Account, 123 Main St., 123-456-7890, GUEST, 0
 C007, regular, 1, Regular Account, 123 Main St., 123-456-7890, REGULAR, 0
 C008, thanhtu, 008, Tran Thanh Tu, 123 Main St., 123-456-7890, VIP, 0
 C009, GUEST, 1, UNKNOWN, Dong Khoi, 12345678, VIP, 0
+C010, guest1, 1, UNKNOWN, UNKNOWN, UNKNOWN, REGULAR, 0
