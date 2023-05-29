@@ -124,7 +124,7 @@ public class AccountModificationController implements Initializable {
         comboBoxType.setItems(FXCollections.observableArrayList("Guest", "Regular", "VIP")); // Set the combo box items
 
         comboBoxType.valueProperty().addListener((observableValue, oldValue, newValue) -> { // Combo box listener
-            if (newValue.equals("VIP")) {
+            if (newValue.equals("Guest")) {
                 pointPane.setVisible(false);
                 return;
             }
