@@ -67,11 +67,11 @@ public class ItemModificationController implements Initializable {
 
         if (Flag.check == 1) //create
         {
-            System.out.println("create");
+            System.out.println("Create");
             //to be added
 
         }else{
-            System.out.println("update");
+            System.out.println("Update");
             //tobe updated
         }
 
