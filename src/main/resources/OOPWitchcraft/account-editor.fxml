@@ -94,7 +94,7 @@
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="usernameField" layoutX="209.0" layoutY="21.0" prefHeight="25.0" prefWidth="345.0" />
+                                    <TextField fx:id="nameField" layoutX="209.0" layoutY="21.0" prefHeight="25.0" prefWidth="345.0" />
                                  </children>
                                  <HBox.margin>
                                     <Insets left="400.0" />
@@ -123,12 +123,12 @@
                            <children>
                               <Pane prefHeight="66.0" prefWidth="601.0">
                                  <children>
-                                    <Label layoutX="73.0" layoutY="18.0" text="Password:">
+                                    <Label layoutX="73.0" layoutY="18.0" text="Username:">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="passwordField1" layoutX="209.0" layoutY="21.0" prefHeight="25.0" prefWidth="345.0" />
+                                    <TextField fx:id="usernameField" layoutX="209.0" layoutY="21.0" prefHeight="25.0" prefWidth="345.0" />
                                  </children>
                                  <HBox.margin>
                                     <Insets left="400.0" />
@@ -140,12 +140,12 @@
                            <children>
                               <Pane prefHeight="66.0" prefWidth="601.0">
                                  <children>
-                                    <Label layoutX="73.0" layoutY="18.0" text="Username:">
+                                    <Label layoutX="73.0" layoutY="18.0" text="Password:">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="nameField" layoutX="209.0" layoutY="21.0" prefHeight="25.0" prefWidth="345.0" />
+                                    <TextField fx:id="passwordField" layoutX="209.0" layoutY="21.0" prefHeight="25.0" prefWidth="345.0" />
                                  </children>
                                  <HBox.margin>
                                     <Insets left="400.0" />

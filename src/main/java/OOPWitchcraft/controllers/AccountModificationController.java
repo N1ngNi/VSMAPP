@@ -48,7 +48,7 @@ public class AccountModificationController implements Initializable {
     @FXML
     private TextField nameField;
 
-    private String id = "";
+    private String id;
 
     @FXML
     // Button event handler
@@ -77,8 +77,8 @@ public class AccountModificationController implements Initializable {
             var account = accounts.createAccount(username, password);
 
             // Check if id is valid
-            if (id == null || id.isEmpty())
-                throw new AccountException("Invalid account id");
+//            if (id == null || id.isEmpty())
+//                throw new AccountException("Invalid account id");
 
             // Get the account by username
             account = accounts.getAccountById(id);

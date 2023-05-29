@@ -88,11 +88,11 @@ public class ItemModificationController implements Initializable {
 
                 if (!newValue.equals("Game"))
                 {
-                    System.out.println("it's not game");
+
                     genrePane.setVisible(true);
                     return;
                 }
-                System.out.println("it's game game");
+
                 genrePane.setVisible(false);
 
             }
@@ -107,6 +107,7 @@ public class ItemModificationController implements Initializable {
 //            comboxRentalType.setValue(null);
 //            comboxLoanType.setValue(null);
 //        }
+
         if (Flag.check == 0)
         {
             idField.setText(Flag.item.getId());
